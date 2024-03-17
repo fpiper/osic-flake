@@ -1,0 +1,167 @@
+{
+  "nodes": {
+    "PaulSchulz_sky130_pschulz_xx_hd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1606871627,
+        "narHash": "sha256-+7DxRIZJM7rsMUcWA6DjVNMaPrhlY2CwdK8RhVNOuDA=",
+        "owner": "PaulSchulz",
+        "repo": "sky130_pschulz_xx_hd",
+        "rev": "6eb3b0718552b034f1bf1870285ff135e3fb2dcb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PaulSchulz",
+        "repo": "sky130_pschulz_xx_hd",
+        "type": "github"
+      }
+    },
+    "StefanSchippers_xschem_sky130": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1709198611,
+        "narHash": "sha256-/HhwFUQtun6XTGuglullWdDqwXp5LuZfo9LZll+uxTA=",
+        "owner": "StefanSchippers",
+        "repo": "xschem_sky130",
+        "rev": "7a60184f1ccb8d733dfbbb08793ae85a21804d3e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "StefanSchippers",
+        "repo": "xschem_sky130",
+        "type": "github"
+      }
+    },
+    "efabless_mpw_precheck": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701877692,
+        "narHash": "sha256-qPN4ruExANz1rgnAMTuVSRVlOnovH9FZkPPenWYvw4Q=",
+        "owner": "efabless",
+        "repo": "mpw_precheck",
+        "rev": "f6b9c3d3f00694f96dce8444149449b4719180f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "efabless",
+        "repo": "mpw_precheck",
+        "type": "github"
+      }
+    },
+    "efabless_sky130_klayout_pdk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1693742232,
+        "narHash": "sha256-NuIVKcuKElOl9UPWd3tSXV3MF3E2DQFY23E6IcjfqGk=",
+        "owner": "efabless",
+        "repo": "sky130_klayout_pdk",
+        "rev": "c4b125f216edda5d755e429cfe876855ff300974",
+        "type": "github"
+      },
+      "original": {
+        "owner": "efabless",
+        "repo": "sky130_klayout_pdk",
+        "type": "github"
+      }
+    },
+    "efabless_skywater-pdk-libs-sky130_fd_io": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701284474,
+        "narHash": "sha256-USPGTqpdllHvBS4amiU68h9i/hiYxLXoQZnMQVixySs=",
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_io",
+        "rev": "979f0a09c39b12e195e5da872eeac62c9f49f8b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_io",
+        "type": "github"
+      }
+    },
+    "efabless_skywater-pdk-libs-sky130_fd_pr": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707674658,
+        "narHash": "sha256-sRzM12A2o6o9xsSkmxjPNCdksNl903ye85RTa3ngAhg=",
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_pr",
+        "rev": "be000a2f9122310e60ac30d762a91aef18e24b48",
+        "type": "github"
+      },
+      "original": {
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_pr",
+        "type": "github"
+      }
+    },
+    "efabless_skywater-pdk-libs-sky130_fd_sc_hd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707674799,
+        "narHash": "sha256-EoilITD3qQpF+kyXBlMzksX6PRHbgNcYhAKYs+bv7kg=",
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_sc_hd",
+        "rev": "89492a051231edb799c330208ed48542eb6a29d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "efabless",
+        "repo": "skywater-pdk-libs-sky130_fd_sc_hd",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1711523803,
+        "narHash": "sha256-UKcYiHWHQynzj6CN/vTcix4yd1eCu1uFdsuarupdCQQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2726f127c15a4cc9810843b96cad73c7eb39e443",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "open_pdks": {
+      "inputs": {
+        "PaulSchulz_sky130_pschulz_xx_hd": "PaulSchulz_sky130_pschulz_xx_hd",
+        "StefanSchippers_xschem_sky130": "StefanSchippers_xschem_sky130",
+        "efabless_mpw_precheck": "efabless_mpw_precheck",
+        "efabless_sky130_klayout_pdk": "efabless_sky130_klayout_pdk",
+        "efabless_skywater-pdk-libs-sky130_fd_io": "efabless_skywater-pdk-libs-sky130_fd_io",
+        "efabless_skywater-pdk-libs-sky130_fd_pr": "efabless_skywater-pdk-libs-sky130_fd_pr",
+        "efabless_skywater-pdk-libs-sky130_fd_sc_hd": "efabless_skywater-pdk-libs-sky130_fd_sc_hd",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1710093759,
+        "narHash": "sha256-YYrUy1D8stZh9LbWPBR5BIfISJw4SMk3C7HrN/+POt8=",
+        "owner": "fpiper",
+        "repo": "open_pdks-flake",
+        "rev": "b6474d4eb1d814ec40ca5404e1af92406771ccd7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fpiper",
+        "repo": "open_pdks-flake",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "open_pdks": "open_pdks"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
