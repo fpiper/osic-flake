@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "cicsim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710677709,
+        "narHash": "sha256-p69rroxTh2nsR7UjVb0kBlQ/USD/mskmKy76yEKZ82g=",
+        "owner": "wulffern",
+        "repo": "cicsim",
+        "rev": "06240aa1e4519ad02cbd7d14cad95c883f747420",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wulffern",
+        "repo": "cicsim",
+        "type": "github"
+      }
+    },
     "efabless_mpw_precheck": {
       "flake": false,
       "locked": {
@@ -157,6 +173,7 @@
     },
     "root": {
       "inputs": {
+        "cicsim": "cicsim",
         "nixpkgs": "nixpkgs",
         "open_pdks": "open_pdks"
       }
