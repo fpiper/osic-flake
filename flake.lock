@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "cicconf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710915318,
+        "narHash": "sha256-US6+3bkNOMNEAfbN9O3RedL5TiXAr7B6zWUvf2wN8NI=",
+        "owner": "wulffern",
+        "repo": "cicconf",
+        "rev": "ea4a01024206fde3a8bb2cdcc37e4823f0f5621c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wulffern",
+        "repo": "cicconf",
+        "type": "github"
+      }
+    },
     "cicsim": {
       "flake": false,
       "locked": {
@@ -189,6 +205,7 @@
     },
     "root": {
       "inputs": {
+        "cicconf": "cicconf",
         "cicsim": "cicsim",
         "netgen": "netgen",
         "nixpkgs": "nixpkgs",

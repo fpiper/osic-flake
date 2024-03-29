@@ -16,9 +16,13 @@
 			url = "github:wulffern/cicsim";
 			flake = false;
 		};
+		cicconf = {
+			url = "github:wulffern/cicconf";
+			flake = false;
+		};
 	};
 
-	outputs = { self, nixpkgs, open_pdks, netgen, cicsim }:
+	outputs = { self, nixpkgs, open_pdks, netgen, cicsim, cicconf }:
 		let
 			pkgs = import nixpkgs {
 				system = "x86_64-linux";
@@ -64,6 +68,27 @@
 						# tikzplotlib # broken with matplotlib 3.8
 					];
 				};
+			packages.x86_64-linux.cicconf =
+				let pkgs = import nixpkgs {
+							system = "x86_64-linux";
+						};
+				in pkgs.python3.pkgs.buildPythonPackage {
+					name = "cicconf";
+					format = "setuptools";
+					src = cicconf;
+
+					propagatedBuildInputs = with pkgs.python311Packages; [
+						pyyaml
+						numpy
+						matplotlib
+						gitpython
+						click
+					];
+					buildInputs = with pkgs.python311Packages; [
+						pip
+					];
+				};
+
 
 			devShells.x86_64-linux.default = self.devShells.x86_64-linux.osic;
 
@@ -71,6 +96,7 @@
 				finalPython = pkgs.python3.override {
 					packageOverrides = python-self: python-super: {
 						cicsim = self.packages.x86_64-linux.cicsim;
+						cicconf = self.packages.x86_64-linux.cicconf;
 					};
 				};
 			in pkgs.mkShell {
@@ -85,6 +111,7 @@
 					pkgs.xschem
 					(finalPython.withPackages (ps: [
 						ps.cicsim
+						ps.cicconf
 					]))
 					pkgs.pandoc
 				];
