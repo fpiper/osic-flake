@@ -128,6 +128,22 @@
         "type": "github"
       }
     },
+    "netgen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1709605569,
+        "narHash": "sha256-ANyKOJpmeNI47MkUolqx9k3sGfiWTqYg0zi9JqTDLSI=",
+        "ref": "refs/heads/master",
+        "rev": "035fef5c724b32d86ffd66361212db9719eac54a",
+        "revCount": 559,
+        "type": "git",
+        "url": "git://opencircuitdesign.com/netgen"
+      },
+      "original": {
+        "type": "git",
+        "url": "git://opencircuitdesign.com/netgen"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1711523803,
@@ -174,6 +190,7 @@
     "root": {
       "inputs": {
         "cicsim": "cicsim",
+        "netgen": "netgen",
         "nixpkgs": "nixpkgs",
         "open_pdks": "open_pdks"
       }

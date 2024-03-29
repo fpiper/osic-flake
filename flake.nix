@@ -8,18 +8,36 @@
 			url = "github:fpiper/open_pdks-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		netgen = {
+			url = "git://opencircuitdesign.com/netgen";
+			flake = false;
+		};
 		cicsim = {
 			url = "github:wulffern/cicsim";
 			flake = false;
 		};
 	};
 
-	outputs = { self, nixpkgs, open_pdks, cicsim }:
+	outputs = { self, nixpkgs, open_pdks, netgen, cicsim }:
 		let
 			pkgs = import nixpkgs {
 				system = "x86_64-linux";
 			};
 		in {
+			packages.x86_64-linux.netgen =
+				let pkgs = import nixpkgs {
+							system = "x86_64-linux";
+						};
+				in pkgs.stdenv.mkDerivation rec {
+					name = "netgen";
+					src = netgen;
+					buildInputs = [ pkgs.tk pkgs.tcl pkgs.python3 ];
+					configureFlags = [
+						"--with-tcl=${pkgs.tcl}"
+						"--with-tk=${pkgs.tk}"
+					];
+					enableParallelBuildung = true;
+				};
 			packages.x86_64-linux.cicsim =
 				let pkgs = import nixpkgs {
 							system = "x86_64-linux";
@@ -61,6 +79,7 @@
 				export PDK_ROOT="${open_pdks.outputs.packages.x86_64-linux.open_pdks}/pdk"
 				'';
 				packages = [
+					self.packages.x86_64-linux.netgen
 					pkgs.ngspice
 					pkgs.magic-vlsi
 					pkgs.xschem
