@@ -106,6 +106,7 @@
 				'';
 				packages = [
 					self.packages.x86_64-linux.netgen
+					pkgs.gaw
 					pkgs.ngspice
 					pkgs.magic-vlsi
 					pkgs.xschem
